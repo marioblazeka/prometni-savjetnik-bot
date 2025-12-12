@@ -17,7 +17,7 @@ const Index = () => {
   const { messages, isTyping, sendMessage, askRandomQuestion } = useChatbot();
   const { playClick, playMessage } = useSoundEffects();
   const scrollRef = useRef<HTMLDivElement>(null);
-  const chatAreaRef = useRef<HTMLDivElement>(null);
+  const chatInputRef = useRef<HTMLDivElement>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('chat');
 
   useEffect(() => {
@@ -40,30 +40,32 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
-      <header className="bg-secondary text-secondary-foreground p-4 shadow-lg">
-        <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center animate-pulse-glow">
-              <Bike className="w-7 h-7 text-primary-foreground" />
+      <header className="bg-secondary text-secondary-foreground p-3 sm:p-4 shadow-lg">
+        <div className="container mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center animate-pulse-glow flex-shrink-0">
+              <Bike className="w-5 h-5 sm:w-7 sm:h-7 text-primary-foreground" />
             </div>
-            <div>
-              <h1 className="text-2xl font-extrabold tracking-tight">LDL</h1>
-              <p className="text-xs text-secondary-foreground/70">Virtualni pomoćnik za učenje prometnih pravila</p>
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-2xl font-extrabold tracking-tight">LDL</h1>
+              <p className="text-[10px] sm:text-xs text-secondary-foreground/70 truncate">Virtualni pomoćnik za učenje prometnih pravila</p>
             </div>
           </div>
           
           {/* Mode navigation */}
-          <div className="flex items-center gap-2">
-            <AnimatedTrafficSigns />
-            <div className="flex items-center gap-2 ml-4">
+          <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+            <div className="hidden sm:flex">
+              <AnimatedTrafficSigns />
+            </div>
+            <div className="flex items-center gap-1 sm:gap-2 sm:ml-4">
               <ModeNavButton 
-                icon={<MessageCircle className="w-4 h-4" />}
+                icon={<MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />}
                 label="Chat"
                 active={viewMode === 'chat'}
                 onClick={() => handleModeChange('chat')}
               />
               <ModeNavButton 
-                icon={<GraduationCap className="w-4 h-4" />}
+                icon={<GraduationCap className="w-3 h-3 sm:w-4 sm:h-4" />}
                 label="Kviz"
                 active={viewMode === 'quiz'}
                 onClick={() => handleModeChange('quiz')}
@@ -77,19 +79,18 @@ const Index = () => {
       <div className="h-2 stripe-pattern" />
 
       {/* Main content */}
-      <main className="flex-1 container mx-auto p-4 flex flex-col max-w-3xl">
+      <main className="flex-1 container mx-auto p-2 sm:p-4 flex flex-col max-w-3xl">
         {viewMode === 'chat' ? (
           <>
             {/* Quick topics */}
-            <div className="mb-4">
-              <p className="text-sm text-muted-foreground mb-2 font-semibold">Brze teme:</p>
-              <QuickTopics onSelect={sendMessage} chatRef={chatAreaRef} />
+            <div className="mb-3 sm:mb-4">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2 font-semibold">Brze teme:</p>
+              <QuickTopics onSelect={sendMessage} chatInputRef={chatInputRef} />
             </div>
 
             {/* Chat area */}
             <div 
-              ref={chatAreaRef}
-              className="flex-1 bg-card rounded-lg border-2 border-secondary shadow-xl overflow-hidden flex flex-col min-h-[400px]"
+              className="flex-1 bg-card rounded-lg border-2 border-secondary shadow-xl overflow-hidden flex flex-col min-h-[300px] sm:min-h-[400px]"
             >
               <ScrollArea className="flex-1 p-4" ref={scrollRef}>
                 <div className="space-y-4">
@@ -117,7 +118,7 @@ const Index = () => {
               </ScrollArea>
 
               {/* Input area */}
-              <div className="p-4 border-t-2 border-secondary bg-muted/30">
+              <div ref={chatInputRef} className="p-3 sm:p-4 border-t-2 border-secondary bg-muted/30">
                 <ChatInput
                   onSend={sendMessage}
                   onRandomQuestion={askRandomQuestion}

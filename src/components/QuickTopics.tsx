@@ -10,7 +10,7 @@ import {
 
 interface QuickTopicsProps {
   onSelect: (topic: string) => void;
-  chatRef?: React.RefObject<HTMLDivElement>;
+  chatInputRef?: React.RefObject<HTMLDivElement>;
 }
 
 const topics = [
@@ -22,26 +22,26 @@ const topics = [
   { Sign: IntersectionSign, label: "Raskrižje", question: "Kako se ponašam na raskrižju?" },
 ];
 
-export const QuickTopics = ({ onSelect, chatRef }: QuickTopicsProps) => {
+export const QuickTopics = ({ onSelect, chatInputRef }: QuickTopicsProps) => {
   const handleClick = (question: string) => {
     onSelect(question);
-    // Scroll to chat area
+    // Scroll to chat input area (bottom of chat)
     setTimeout(() => {
-      chatRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+      chatInputRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 150);
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-      {topics.map((topic, index) => (
+    <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+      {topics.map((topic) => (
         <Button
           key={topic.label}
           variant="outline"
           onClick={() => handleClick(topic.question)}
-          className="flex flex-col items-center gap-2 h-auto py-3 border-2 border-secondary hover:border-primary hover:bg-primary/10 transition-all group"
+          className="flex flex-col items-center gap-1 sm:gap-2 h-auto py-2 sm:py-3 px-1 sm:px-3 border-2 border-secondary hover:border-primary hover:bg-primary/10 transition-all group"
         >
-          <topic.Sign className="w-10 h-10" animate={false} />
-          <span className="text-xs font-medium">{topic.label}</span>
+          <topic.Sign className="w-7 h-7 sm:w-10 sm:h-10" animate={false} />
+          <span className="text-[10px] sm:text-xs font-medium text-center leading-tight">{topic.label}</span>
         </Button>
       ))}
     </div>
