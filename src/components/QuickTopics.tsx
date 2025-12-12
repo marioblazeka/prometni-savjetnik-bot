@@ -1,37 +1,46 @@
 import { Button } from "@/components/ui/button";
-import { 
-  Bike, 
-  AlertTriangle, 
-  Shield, 
-  Navigation, 
-  Lightbulb,
-  HelpCircle
-} from "lucide-react";
+import {
+  BikePathSign,
+  HelmetSign,
+  DangerSign,
+  StopSign,
+  NightDrivingSign,
+  IntersectionSign
+} from "@/components/TrafficSignsSVG";
 
 interface QuickTopicsProps {
   onSelect: (topic: string) => void;
+  chatRef?: React.RefObject<HTMLDivElement>;
 }
 
 const topics = [
-  { icon: Bike, label: "Oprema bicikla", question: "Koja oprema mora biti na biciklu?" },
-  { icon: Shield, label: "Kaciga", question: "Zašto je važno nositi kacigu?" },
-  { icon: AlertTriangle, label: "Prometni znakovi", question: "Koje vrste prometnih znakova postoje?" },
-  { icon: Navigation, label: "Pravila vožnje", question: "Koja su osnovna pravila vožnje biciklom?" },
-  { icon: Lightbulb, label: "Noćna vožnja", question: "Što moram imati za vožnju noću?" },
-  { icon: HelpCircle, label: "Raskrižje", question: "Kako se ponašam na raskrižju?" },
+  { Sign: BikePathSign, label: "Oprema bicikla", question: "Koja oprema mora biti na biciklu?" },
+  { Sign: HelmetSign, label: "Kaciga", question: "Zašto je važno nositi kacigu?" },
+  { Sign: DangerSign, label: "Prometni znakovi", question: "Koje vrste prometnih znakova postoje?" },
+  { Sign: StopSign, label: "Pravila vožnje", question: "Koja su osnovna pravila vožnje biciklom?" },
+  { Sign: NightDrivingSign, label: "Noćna vožnja", question: "Što moram imati za vožnju noću?" },
+  { Sign: IntersectionSign, label: "Raskrižje", question: "Kako se ponašam na raskrižju?" },
 ];
 
-export const QuickTopics = ({ onSelect }: QuickTopicsProps) => {
+export const QuickTopics = ({ onSelect, chatRef }: QuickTopicsProps) => {
+  const handleClick = (question: string) => {
+    onSelect(question);
+    // Scroll to chat area
+    setTimeout(() => {
+      chatRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  };
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-      {topics.map((topic) => (
+      {topics.map((topic, index) => (
         <Button
           key={topic.label}
           variant="outline"
-          onClick={() => onSelect(topic.question)}
+          onClick={() => handleClick(topic.question)}
           className="flex flex-col items-center gap-2 h-auto py-3 border-2 border-secondary hover:border-primary hover:bg-primary/10 transition-all group"
         >
-          <topic.icon className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
+          <topic.Sign className="w-10 h-10" animate={false} />
           <span className="text-xs font-medium">{topic.label}</span>
         </Button>
       ))}
