@@ -101,7 +101,15 @@ export const trafficKnowledge = {
     "Pazi na cesti, ne budi bedast!",
     "Kaj praviš bez ruk na rulju? Si normalen?",
     "Desna stran je tvoja stran, ne pozabi!",
-    "Telefon v žep dok voziš, jel kapči?"
+    "Telefon v žep dok voziš, jel kapči?",
+    "Nejdi kak muha bez glave, razmisli!",
+    "Biciklin je fajn, al samo ak si pameten!",
+    "Gle levo, gle desno - pak pojdi!",
+    "Kak veliš na Međimurski: pazi na kožu!",
+    "Ne boj se pravil, pravila te čuvaju!",
+    "Kaj ti je teško ruku dignuti? Daj signaliziraj!",
+    "Polahko priko zebr, pešaki su sveti!",
+    "Brez svetla noćum si kak crni mačak - nevidljiv!"
   ],
 
   duhovita_pitanja: [
