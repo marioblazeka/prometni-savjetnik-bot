@@ -129,7 +129,7 @@ export const QuizMode = ({ onClose }: QuizModeProps) => {
           {currentQuestion.signImage && (
             <TrafficSignIcon type={currentQuestion.signImage} />
           )}
-          <p className="text-lg font-semibold flex-1">{currentQuestion.question}</p>
+          <p className="text-lg font-semibold flex-1 break-words">{currentQuestion.question}</p>
         </div>
 
         {/* Answer options */}
@@ -138,7 +138,7 @@ export const QuizMode = ({ onClose }: QuizModeProps) => {
             const isSelected = selectedAnswer === index;
             const isCorrect = index === currentQuestion.correctAnswer;
             
-            let buttonClass = "w-full justify-start text-left h-auto py-3 px-4 ";
+            let buttonClass = "w-full justify-start text-left h-auto py-3 px-4 whitespace-normal break-words ";
             
             if (showResult) {
               if (isCorrect) {
