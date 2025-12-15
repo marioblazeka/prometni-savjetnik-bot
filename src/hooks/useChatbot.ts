@@ -65,12 +65,12 @@ const containsKeyword = (text: string, keywords: string[]): boolean => {
 
 // Definicije tema s ključnim riječima (prošireno)
 const topicKeywords = {
-  oprema: ["oprema", "mora biti", "obavezna", "opreme", "opreml", "biciklu", "potrebno", "treba imati", "sto treba", "sta treba"],
-  kaciga: ["kaciga", "kacige", "kacig", "zastita glave", "glava", "helmet", "kasiga", "caciga"],
-  prometni_znakovi: ["znak", "znakovi", "znakov", "prometni", "prometn", "trokut", "krug", "pravokutnik", "crveni", "plavi", "zuti"],
-  pravila: ["pravila", "pravil", "pravlo", "voznja", "voznje", "vozit", "osnovna", "kako voziti", "smije", "smijem", "moze", "mogu"],
-  nocna_voznja: ["noc", "nocu", "nocna", "mrak", "mraku", "svjetl", "svjetlo", "tama", "vecer", "kasno"],
-  raskrizje: ["raskrizj", "krizanj", "raskrsc", "raskriž", "raskirzje", "krizan", "skretanje", "prednost", "desna strana"],
+  oprema: ["oprema", "mora biti", "obavezna", "opreme", "opreml", "biciklu", "potrebno", "treba imati", "sto treba", "sta treba", "koja oprema"],
+  kaciga: ["kaciga", "kacige", "kacig", "zastita glave", "glava", "helmet", "kasiga", "caciga", "zasto kaciga", "vazno nositi kacigu"],
+  prometni_znakovi: ["znak", "znakovi", "znakov", "prometni", "prometn", "trokut", "krug", "pravokutnik", "crveni", "plavi", "zuti", "vrste znakova"],
+  pravila: ["pravila", "pravil", "pravlo", "voznja", "voznje", "vozit", "osnovna", "kako voziti", "smije", "smijem", "moze", "mogu", "osnovna pravila"],
+  nocna_voznja: ["noc", "nocu", "nocna", "mrak", "mraku", "svjetl", "svjetlo", "tama", "vecer", "kasno", "za voznju nocu", "voznju nocu"],
+  raskrizje: ["raskrizj", "krizanj", "raskrsc", "raskriž", "raskirzje", "krizan", "skretanje", "prednost", "desna strana", "ponasam na raskrizju", "raskrizju"],
   pojmovi: ["sto je", "sta je", "definicija", "pojam", "pojmovi", "znaci", "znacenje"],
   zabranjeno: ["zabranjen", "ne smije", "sto ne smijem", "sta ne smijem", "nesmije", "ne mogu", "zabranjuje"],
   staza_traka: ["staza", "traka", "biciklisticka", "biciklistick", "biciklistic"],
@@ -118,12 +118,12 @@ const generateResponse = (question: string): string => {
   // Oprema bicikla
   if (containsKeyword(question, topicKeywords.oprema)) {
     const oprema = trafficKnowledge.oprema_bicikla;
-    return `🚲 OBAVEZNA OPREMA BICIKLA:\n\n${oprema.obavezna.map((o, i) => `${i + 1}. ${o}`).join("\n")}\n\n⭐ PREPORUČENA OPREMA:\n${oprema.preporucena.map(o => `• ${o}`).join("\n")}\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.kaciga}\n\n🗣️ ${izreka}`;
+    return `🚲 OBAVEZNA OPREMA BICIKLA:\n\n${oprema.obavezna.map((o, i) => `${i + 1}. ${o}`).join("\n")}\n\n⭐ PREPORUČENA OPREMA:\n${oprema.preporucena.map(o => `• ${o}`).join("\n")}\n\n🛴 OBAVEZNA OPREMA ZA OPS (romobil):\n${oprema.ops_obavezna.map(o => `• ${o}`).join("\n")}\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.kaciga}\n\n🗣️ ${izreka}`;
   }
 
   // Kaciga
   if (containsKeyword(question, topicKeywords.kaciga)) {
-    return `🪖 KACIGA - TVOJ NAJBOLJI PRIJATELJ!\n\nKaciga je OBAVEZNA za sve bicikliste mlađe od 16 godina!\n\nZašto je važna?\n• Štiti tvoju glavu od ozljeda\n• Smanjuje rizik od ozljede glave za čak 85%!\n• Može ti spasiti život\n\nKako odabrati kacigu?\n• Mora dobro prianjati uz glavu\n• Ne smije biti prevelika ni premala\n• Remen mora biti dobro zategnut\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.kaciga}\n\n🗣️ ${izreka}`;
+    return `🪖 KACIGA - TVOJ NAJBOLJI PRIJATELJ!\n\nKaciga je OBAVEZNA za:\n• Sve bicikliste mlađe od 16 godina!\n• SVE vozače osobnih prijevoznih sredstava (OPS - romobili)!\n\nZašto je važna?\n• Štiti tvoju glavu od ozljeda\n• Smanjuje rizik od ozljede glave za čak 85%!\n• Može ti spasiti život\n\nKako odabrati kacigu?\n• Mora biti homologirana i propisana\n• Mora dobro prianjati uz glavu\n• Ne smije biti prevelika ni premala\n• Remen mora biti dobro zategnut\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.kaciga}\n\n🗣️ ${izreka}`;
   }
 
   // Prometni znakovi
@@ -135,18 +135,19 @@ const generateResponse = (question: string): string => {
   // Pravila vožnje
   if (containsKeyword(question, topicKeywords.pravila)) {
     const pravila = trafficKnowledge.pravila_voznje;
-    return `📋 OSNOVNA PRAVILA VOŽNJE BICIKLOM:\n\n✅ MORAŠ:\n${pravila.osnovna.map(p => `• ${p}`).join("\n")}\n\n❌ ZABRANJENO JE:\n${pravila.zabranjeno.slice(0, 4).map(p => `• ${p}`).join("\n")}\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.opce}\n\n🗣️ ${izreka}`;
+    return `📋 OSNOVNA PRAVILA VOŽNJE BICIKLOM:\n\n✅ MORAŠ:\n${pravila.osnovna.map(p => `• ${p}`).join("\n")}\n\n❌ ZABRANJENO JE:\n${pravila.zabranjeno.slice(0, 6).map(p => `• ${p}`).join("\n")}\n\n📌 Minimalna dob: ${pravila.minimalna_dob}\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.opce}\n\n🗣️ ${izreka}`;
   }
 
   // Noćna vožnja
   if (containsKeyword(question, topicKeywords.nocna_voznja)) {
-    return `🌙 VOŽNJA NOĆU I U MRAKU:\n\nOBAVEZNO moraš imati:\n• PREDNJE svjetlo BIJELE boje\n• STRAŽNJE svjetlo CRVENE boje\n• Reflektore (katadioptere) na biciklu\n\nSAVJET: Nosi reflektirajući prsluk - tako te vozači bolje vide!\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.nocna_voznja}\n\n⚠️ Bez svjetala noću si NEVIDLJIV - a to je jako opasno!\n\n🗣️ ${izreka}`;
+    const oprema = trafficKnowledge.oprema_bicikla;
+    return `🌙 VOŽNJA NOĆU I U MRAKU:\n\nOBAVEZNA OPREMA ZA NOĆNU VOŽNJU:\n• Prednje svjetlo BIJELE boje\n• Stražnje svjetlo CRVENE boje\n• Stražnji reflektor (katadiopter) crvene boje\n• Prednji reflektor bijele ili žute boje\n• Bočni reflektori na kotačima (bijeli ili žuti)\n• Reflektori na pedalama (žute ili narančaste boje)\n\n👕 OBAVEZNO NOĆU:\n• Reflektirajući prsluk ili reflektirajuća odjeća ili druga reflektirajuća oznaka\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.nocna_voznja}\n\n⚠️ Bez svjetala noću si NEVIDLJIV - a to je jako opasno!\n\n🗣️ ${izreka}`;
   }
 
   // Raskrižje
   if (containsKeyword(question, topicKeywords.raskrizje)) {
     const raskrizje = trafficKnowledge.raskrizje;
-    return `🔀 PONAŠANJE NA RASKRIŽJU:\n\n⭐ PRAVILO DESNE STRANE:\n${raskrizje.pravilo_desne_strane}\n\n📝 REDOSLIJED PROLASKA:\n${raskrizje.redoslijed_prolaska.join("\n")}\n\n⚠️ VAŽNO: ${raskrizje.skretanje_lijevo}\n\nNe zaboravi signalizirati rukom kada skrećeš!\n\n🗣️ ${izreka}`;
+    return `🔀 PONAŠANJE NA RASKRIŽJU:\n\n⭐ PRAVILO DESNE STRANE:\n${raskrizje.pravilo_desne_strane}\n\n📝 REDOSLIJED PROLASKA:\n${raskrizje.redoslijed_prolaska.join("\n")}\n\n⚠️ VAŽNO: ${raskrizje.skretanje_lijevo}\n\n📋 RADNJE NA RASKRIŽJU:\n1. Uspori vožnju\n2. Obvezno se zaustavi\n3. Spusti jednu nogu na kolnik\n4. Propusti sva vozila na cesti na koju se uključuješ\n\n🚦 SEMAFOR:\n• Žuto treptavo svjetlo = povećani oprez\n• Crveno + žuto = uskoro zeleno\n\nNe zaboravi signalizirati rukom kada skrećeš!\n\n🗣️ ${izreka}`;
   }
 
   // Pojmovi
@@ -159,23 +160,24 @@ const generateResponse = (question: string): string => {
     if (normalizedQ.includes("bicikl")) return `📖 BICIKL: ${pojmovi.bicikl}\n\n🗣️ ${izreka}`;
     if (normalizedQ.includes("vozac")) return `📖 VOZAČ: ${pojmovi.vozac}\n\n🗣️ ${izreka}`;
     if (normalizedQ.includes("pjesak") || normalizedQ.includes("pesak")) return `📖 PJEŠAK: ${pojmovi.pjesak}\n\n🗣️ ${izreka}`;
+    if (normalizedQ.includes("ops") || normalizedQ.includes("romobil")) return `📖 OSOBNO PRIJEVOZNO SREDSTVO (OPS): ${pojmovi.ops}\n\n🗣️ ${izreka}`;
   }
 
   // Zabranjeno
   if (containsKeyword(question, topicKeywords.zabranjeno)) {
     const zabranjeno = trafficKnowledge.pravila_voznje.zabranjeno;
-    return `🚫 ŠTO JE ZABRANJENO BICIKLISTIMA:\n\n${zabranjeno.map(z => `❌ ${z}`).join("\n")}\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.alkohol}\n\n🗣️ ${izreka}`;
+    return `🚫 ŠTO JE ZABRANJENO BICIKLISTIMA:\n\n${zabranjeno.map(z => `❌ ${z}`).join("\n")}\n\n💰 KAZNE:\n• ${trafficKnowledge.kazne.slusalice}\n• ${trafficKnowledge.kazne.mobitel}\n\n📊 STATISTIKA: ${trafficKnowledge.statistika.alkohol}\n\n🗣️ ${izreka}`;
   }
 
   // Biciklistička staza/traka
   if (containsKeyword(question, topicKeywords.staza_traka)) {
     const pojmovi = trafficKnowledge.pojmovi;
-    return `🛤️ BICIKLISTIČKA STAZA vs TRAKA:\n\n🟦 BICIKLISTIČKA STAZA:\n${pojmovi.biciklisticka_staza}\n\n🟨 BICIKLISTIČKA TRAKA:\n${pojmovi.biciklisticka_traka}\n\n✅ Ako postoji biciklistička staza ili traka - OBAVEZNO ju koristi!\n\n🗣️ ${izreka}`;
+    return `🛤️ BICIKLISTIČKA STAZA vs TRAKA:\n\n🟦 BICIKLISTIČKA STAZA:\n${pojmovi.biciklisticka_staza}\n\n🟨 BICIKLISTIČKA TRAKA:\n${pojmovi.biciklisticka_traka}\n\n✅ Ako postoji biciklistička staza ili traka - OBAVEZNO ju koristi!\n\n🛴 OPS (romobili) se također kreću po biciklističkim stazama i trakama!\n\n🗣️ ${izreka}`;
   }
 
   // Signalizacija
   if (containsKeyword(question, topicKeywords.signalizacija)) {
-    return `✋ SIGNALIZACIJA RUKOM:\n\n➡️ SKRETANJE DESNO:\nIspruži DESNU ruku u stranu\n\n⬅️ SKRETANJE LIJEVO:\nIspruži LIJEVU ruku u stranu\n\n🛑 KOČENJE/STAJANJE:\nPodigni LIJEVU ruku gore\n\n⚠️ VAŽNO:\n• Signaliziraj PRIJE nego što skreneš\n• Drži ruku ispruženu dok ne skreneš\n• Vrati obje ruke na upravljač za skretanje\n\n🗣️ ${izreka}`;
+    return `✋ SIGNALIZACIJA RUKOM:\n\n➡️ SKRETANJE DESNO:\nIspruži DESNU ruku u stranu\n\n⬅️ SKRETANJE LIJEVO:\nIspruži LIJEVU ruku u stranu\n\n🛑 KOČENJE/STAJANJE:\nPodigni LIJEVU ruku gore\n\n⚠️ VAŽNO:\n• Signaliziraj PRIJE nego što skreneš\n• Drži ruku ispruženu dok ne skreneš\n• Vrati obje ruke na upravljač za skretanje\n\n📋 REDOSLIJED PRIJE SKRETANJA:\n1. Provjera uvjeta preko ramena\n2. Najava uključivanja odručenjem ruke\n3. Skretanje\n\n🗣️ ${izreka}`;
   }
 
   // Statistika
@@ -198,7 +200,7 @@ export const useChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
-      text: `Bok! Ja sam LUKAS 🚴, tvoj virtualni pomoćnik za učenje prometnih pravila!\n\nPomognut ću ti da se pripremiš za biciklistički ispit. Pitaj me bilo što o:\n• Opremi bicikla\n• Prometnim znakovima\n• Pravilima vožnje\n• Sigurnosti u prometu\n\n${getRandomDuhovitoPitanje()}\n\n🗣️ ${getRandomMedimurskaIzreka()}`,
+      text: `Bok! Ja sam LUKAS 🚴, tvoj virtualni pomoćnik za učenje prometnih pravila!\n\nPomognut ću ti da se pripremiš za biciklistički ispit. Pitaj me bilo što o:\n• Opremi bicikla\n• Prometnim znakovima\n• Pravilima vožnje\n• Sigurnosti u prometu\n• OPS (osobna prijevozna sredstva - romobili)\n\n${getRandomDuhovitoPitanje()}\n\n🗣️ ${getRandomMedimurskaIzreka()}`,
       isBot: true,
       timestamp: new Date(),
     },
