@@ -25,10 +25,14 @@ const topics = [
 export const QuickTopics = ({ onSelect, chatInputRef }: QuickTopicsProps) => {
   const handleClick = (question: string) => {
     onSelect(question);
-    // Scroll to chat input area (bottom of chat)
+    // Scroll to chat area
     setTimeout(() => {
-      chatInputRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 150);
+      if (chatInputRef?.current) {
+        chatInputRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+      // Also scroll window to bottom
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 200);
   };
 
   return (
