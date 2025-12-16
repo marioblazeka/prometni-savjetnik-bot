@@ -162,13 +162,20 @@ export const trafficKnowledge = {
   duhovita_pitanja: [
     // Oprema bicikla
     "Znaš li koja oprema MORA biti na biciklu? Ajde, nabroji!",
-    "Koliko kočnica mora imati ispravan bicikl? Jedna, dvije ili tri?",
+    "Koliko kočnica mora imati ispravan bicikl?",
     "Koje boje mora biti prednje svjetlo na biciklu?",
     "Koje boje mora biti stražnje svjetlo na biciklu?",
     "Zašto su reflektori (katadiopteri) važni na biciklu?",
-    "Mora li bicikl imati zvono? I zašto?",
+    "Mora li bicikl imati zvono?",
     "Što je katadiopter i gdje se stavlja na bicikl?",
     "Koje boje moraju biti bočni reflektori na kotačima?",
+    "Gdje se stavlja crveni katadiopter na bicikl?",
+    "Na pedalama bicikla moraju biti reflektori koje boje?",
+    "Kada moraš pregledati ispravnost bicikla?",
+    "Što sve moraš provjeriti prije vožnje biciklom?",
+    "Koliko širok smije biti teret na biciklu sa svake strane?",
+    "Koliko široka smije biti prikolica za bicikl?",
+    "O čemu ovisi duljina puta kočenja?",
     
     // Kaciga i zaštita
     "Do koje dobi je kaciga OBAVEZNA za bicikliste?",
@@ -176,6 +183,9 @@ export const trafficKnowledge = {
     "Zašto je važno nositi kacigu tijekom vožnje?",
     "Kako pravilno namjestiti kacigu na glavu?",
     "Za koliko posto kaciga smanjuje rizik od ozljede glave?",
+    "Što koristiš za osobnu zaštitu osim kacige?",
+    "Kako postupaš ako si umoran nakon treninga?",
+    "Zašto je bitno nositi reflektirajuću odjeću noću?",
     
     // Prometni znakovi
     "Koje tri vrste prometnih znakova postoje?",
@@ -184,24 +194,42 @@ export const trafficKnowledge = {
     "Kakav oblik imaju znakovi obavijesti?",
     "Koje boje je rub znakova opasnosti?",
     "Što znači prometni znak STOP?",
+    "Što znači trokutasti prometni znak?",
+    "Što znači okrugli prometni znak?",
+    "Što znači pravokutni prometni znak?",
+    "Kako postupaš na znak 'Zona smirenog prometa'?",
+    "Što označava prometni znak s biciklom?",
     
     // Pravila vožnje
     "Kojom stranom ceste voziš bicikl?",
     "Smiju li dva biciklista voziti jedan pored drugoga?",
     "Kako signaliziraš skretanje lijevo?",
     "Kako signaliziraš skretanje desno?",
+    "Kako signaliziraš zaustavljanje bicikla?",
     "S koliko godina smiješ samostalno voziti bicikl u prometu?",
     "Smiješ li voziti bicikl bez ruku na upravljaču?",
     "Smiješ li koristiti mobitel dok voziš bicikl?",
     "Smiješ li koristiti slušalice na OBA uha dok voziš?",
     "Smiješ li prevoziti drugu osobu na biciklu bez posebnog sjedala?",
     "Smiješ li se držati za drugo vozilo dok voziš bicikl?",
+    "Smiješ li krivudati biciklom po cesti?",
+    "Smiješ li voziti slalom između vozila?",
+    "Gdje bicikl NE smiješ voziti?",
+    "Koje površine možeš koristiti za vožnju biciklom?",
+    "Kako prelaziš nogostup s biciklom?",
+    "Kako se ponašaš kada pješaci hodaju biciklističkom stazom?",
+    "Koji je redoslijed radnji prije uključivanja u promet?",
+    "Što moraš napraviti prije skretanja?",
+    "Kako voziš po šljunku i pijesku?",
+    "Gdje parkiraš bicikl?",
     
     // Noćna vožnja
     "Što moraš imati za vožnju biciklom noću?",
     "Je li reflektirajući prsluk obavezan noću?",
     "Zašto je noćna vožnja bez svjetala opasna?",
     "Koliko posto nesreća biciklista noću događa se zbog neispravne rasvjete?",
+    "Koje boje mora biti svjetlo naprijed noću?",
+    "Koje boje mora biti svjetlo straga noću?",
     
     // Raskrižje i prednost
     "Tko ima prednost na raskrižju bez znakova?",
@@ -209,6 +237,11 @@ export const trafficKnowledge = {
     "Kako se ponašaš na raskrižju s prometnim znakovima?",
     "Što moraš napraviti prije skretanja lijevo?",
     "Kako se pravilno uključuješ u promet?",
+    "Koji je redoslijed prolaska na raskrižju?",
+    "Kako postupaš na pješačkom prijelazu?",
+    "Kako prelaziš željezničku prugu?",
+    "Na što paziš prilikom obilaženja?",
+    "Što znači žuto treptavo svjetlo na semaforu?",
     
     // OPS (romobili)
     "Što je OPS - osobno prijevozno sredstvo?",
@@ -216,25 +249,41 @@ export const trafficKnowledge = {
     "Gdje se vozač OPS-a prvenstveno mora kretati?",
     "Je li kaciga obavezna za vozače OPS-a?",
     "Smije li OPS voziti po nogostupu?",
+    "Koja je maksimalna snaga elektromotora OPS-a?",
+    "Ima li OPS sjedeće mjesto?",
     
     // Pojmovi
     "Što je kolnik?",
     "Što je nogostup?",
+    "Što je prometna traka?",
     "Koja je razlika između biciklističke staze i trake?",
     "Što je zona smirenog prometa?",
     "Što je pješačka zona?",
-    "Što je pješački prijelaz i kako ga prelaziš?",
+    "Što je pješački prijelaz?",
+    "Što je raskrižje?",
+    "Što je vozilo prema zakonu?",
+    "Tko je vozač?",
+    "Tko je pješak?",
     
     // Zabrane i kazne
     "Koja je kazna za korištenje slušalica na oba uha?",
     "Što je sve zabranjeno biciklistima?",
     "Smiješ li voziti bicikl pod utjecajem alkohola?",
-    "Smiješ li krivudati biciklom po cesti?",
+    "Smiješ li voziti bicikl s neispravnim kočnicama?",
     
-    // Statistika i sigurnost
-    "Zašto su pravila prometa tako važna?",
+    // Pješaci
+    "Kojom stranom ceste hodaš kao pješak izvan naselja?",
+    "Kako prelaziš kolnik kao pješak?",
+    "Što koristiš za prijelaz preko kolnika?",
+    "Što radiš s neispravnim biciklom?",
+    
+    // Sigurnost
+    "Zašto su pravila prometa važna?",
     "Koliko biciklista godišnje strada u Hrvatskoj?",
-    "Koji postotak nesreća biciklista je povezan s alkoholom?"
+    "Koji postotak nesreća biciklista je povezan s alkoholom?",
+    "Što je najvažnije za sigurnu vožnju?",
+    "Zašto je bitan bočni razmak?",
+    "Zašto je bitan razmak od vozila ispred tebe?"
   ]
 };
 
