@@ -160,14 +160,81 @@ export const trafficKnowledge = {
   ],
 
   duhovita_pitanja: [
-    "Znaš li zašto bicikl ne može sam stajati? Jer je pre-umoran! 🚲 Ali ozbiljno - znaš li koja oprema mora biti na biciklu?",
-    "Što kaže prometni znak biciklistu? 'Stani malo i pogledaj me!' Znaš li prepoznati znakove opasnosti?",
-    "Zašto je bicikl bez svjetla kao ninja? Jer ga nitko ne vidi! A to NIJE dobro. Znaš li kada moraš imati upaljena svjetla?",
-    "Što je zajedničko biciklu i dobrom učeniku? Oboje idu pravim putem! Znaš li kojom stranom ceste moraš voziti?",
-    "Kaciga i glava su best frendovi - jedna čuva drugu! Znaš li do koje dobi je kaciga OBAVEZNA?",
-    "Što kaže prometni policajac biciklistu bez kacige? 'Glava ti je previše vrijedna za takve gluposti!'",
-    "Zašto je pametno signalizirati rukom? Jer drugi vozači ne čitaju misli!",
-    "Što je OPS? Ne, nije operativni prometni sustav - to je osobno prijevozno sredstvo, kao romobil!"
+    // Oprema bicikla
+    "Znaš li koja oprema MORA biti na biciklu? Ajde, nabroji!",
+    "Koliko kočnica mora imati ispravan bicikl? Jedna, dvije ili tri?",
+    "Koje boje mora biti prednje svjetlo na biciklu?",
+    "Koje boje mora biti stražnje svjetlo na biciklu?",
+    "Zašto su reflektori (katadiopteri) važni na biciklu?",
+    "Mora li bicikl imati zvono? I zašto?",
+    "Što je katadiopter i gdje se stavlja na bicikl?",
+    "Koje boje moraju biti bočni reflektori na kotačima?",
+    
+    // Kaciga i zaštita
+    "Do koje dobi je kaciga OBAVEZNA za bicikliste?",
+    "Je li kaciga obavezna za vozače romobila (OPS)?",
+    "Zašto je važno nositi kacigu tijekom vožnje?",
+    "Kako pravilno namjestiti kacigu na glavu?",
+    "Za koliko posto kaciga smanjuje rizik od ozljede glave?",
+    
+    // Prometni znakovi
+    "Koje tri vrste prometnih znakova postoje?",
+    "Kakav oblik imaju znakovi opasnosti?",
+    "Kakav oblik imaju znakovi izričite naredbe?",
+    "Kakav oblik imaju znakovi obavijesti?",
+    "Koje boje je rub znakova opasnosti?",
+    "Što znači prometni znak STOP?",
+    
+    // Pravila vožnje
+    "Kojom stranom ceste voziš bicikl?",
+    "Smiju li dva biciklista voziti jedan pored drugoga?",
+    "Kako signaliziraš skretanje lijevo?",
+    "Kako signaliziraš skretanje desno?",
+    "S koliko godina smiješ samostalno voziti bicikl u prometu?",
+    "Smiješ li voziti bicikl bez ruku na upravljaču?",
+    "Smiješ li koristiti mobitel dok voziš bicikl?",
+    "Smiješ li koristiti slušalice na OBA uha dok voziš?",
+    "Smiješ li prevoziti drugu osobu na biciklu bez posebnog sjedala?",
+    "Smiješ li se držati za drugo vozilo dok voziš bicikl?",
+    
+    // Noćna vožnja
+    "Što moraš imati za vožnju biciklom noću?",
+    "Je li reflektirajući prsluk obavezan noću?",
+    "Zašto je noćna vožnja bez svjetala opasna?",
+    "Koliko posto nesreća biciklista noću događa se zbog neispravne rasvjete?",
+    
+    // Raskrižje i prednost
+    "Tko ima prednost na raskrižju bez znakova?",
+    "Što je pravilo desne strane?",
+    "Kako se ponašaš na raskrižju s prometnim znakovima?",
+    "Što moraš napraviti prije skretanja lijevo?",
+    "Kako se pravilno uključuješ u promet?",
+    
+    // OPS (romobili)
+    "Što je OPS - osobno prijevozno sredstvo?",
+    "Koja je maksimalna brzina OPS-a?",
+    "Gdje se vozač OPS-a prvenstveno mora kretati?",
+    "Je li kaciga obavezna za vozače OPS-a?",
+    "Smije li OPS voziti po nogostupu?",
+    
+    // Pojmovi
+    "Što je kolnik?",
+    "Što je nogostup?",
+    "Koja je razlika između biciklističke staze i trake?",
+    "Što je zona smirenog prometa?",
+    "Što je pješačka zona?",
+    "Što je pješački prijelaz i kako ga prelaziš?",
+    
+    // Zabrane i kazne
+    "Koja je kazna za korištenje slušalica na oba uha?",
+    "Što je sve zabranjeno biciklistima?",
+    "Smiješ li voziti bicikl pod utjecajem alkohola?",
+    "Smiješ li krivudati biciklom po cesti?",
+    
+    // Statistika i sigurnost
+    "Zašto su pravila prometa tako važna?",
+    "Koliko biciklista godišnje strada u Hrvatskoj?",
+    "Koji postotak nesreća biciklista je povezan s alkoholom?"
   ]
 };
 
