@@ -56,21 +56,27 @@ const containsKeyword = (text: string, keywords: string[]): boolean => {
   
   return keywords.some(keyword => {
     const normalizedKeyword = normalizeText(keyword);
-    // Direktna podudarnost
+    // Direktna podudarnost (cijele fraze)
     if (normalizedText.includes(normalizedKeyword)) return true;
-    // Podudarnost s tolerancijom
+    // Pojedinačne riječi unutar fraze
+    const keywordWords = normalizedKeyword.split(/\s+/);
+    if (keywordWords.length > 1) {
+      // Za višeriječne ključne riječi, provjeri sadrži li sve riječi
+      return keywordWords.every(kw => normalizedText.includes(kw));
+    }
+    // Podudarnost s tolerancijom za pojedinačne riječi
     return words.some(word => isSimilarWord(word, normalizedKeyword));
   });
 };
 
-// Definicije tema s ključnim riječima (prošireno)
+// Definicije tema s ključnim riječima (prošireno za bolje prepoznavanje)
 const topicKeywords = {
-  oprema: ["oprema", "mora biti", "obavezna", "opreme", "opreml", "biciklu", "potrebno", "treba imati", "sto treba", "sta treba", "koja oprema"],
-  kaciga: ["kaciga", "kacige", "kacig", "zastita glave", "glava", "helmet", "kasiga", "caciga", "zasto kaciga", "vazno nositi kacigu"],
-  prometni_znakovi: ["znak", "znakovi", "znakov", "prometni", "prometn", "trokut", "krug", "pravokutnik", "crveni", "plavi", "zuti", "vrste znakova"],
-  pravila: ["pravila", "pravil", "pravlo", "voznja", "voznje", "vozit", "osnovna", "kako voziti", "smije", "smijem", "moze", "mogu", "osnovna pravila"],
-  nocna_voznja: ["noc", "nocu", "nocna", "mrak", "mraku", "svjetl", "svjetlo", "tama", "vecer", "kasno", "za voznju nocu", "voznju nocu"],
-  raskrizje: ["raskrizj", "krizanj", "raskrsc", "raskriž", "raskirzje", "krizan", "skretanje", "prednost", "desna strana", "ponasam na raskrizju", "raskrizju"],
+  oprema: ["oprema mora", "koja oprema", "oprema bicikl", "obavezna oprema", "mora biti na bicikl", "oprema", "opreme", "treba imati", "sto treba", "sta treba"],
+  kaciga: ["nositi kacigu", "vazno nositi", "zasto kaciga", "kaciga", "kacige", "zastita glave", "helmet"],
+  prometni_znakovi: ["vrste prometnih", "prometnih znakova", "prometni znakovi", "znakovi postoje", "prometni znak", "znakovi", "znak opasnosti", "znak naredbe", "znak obavijesti"],
+  pravila: ["pravila voznje", "osnovna pravila", "pravila bicikl", "kako voziti", "pravila", "voznje biciklom", "voziti bicikl"],
+  nocna_voznja: ["voznju nocu", "voznja nocu", "moram imati za voznju", "nocna voznja", "nocu", "nocna", "mrak", "svjetl", "svjetlo"],
+  raskrizje: ["ponasam na raskrizju", "na raskrizju", "raskrizje", "raskrizj", "prednost prolaska", "pravilo desne"],
   pojmovi: ["sto je", "sta je", "definicija", "pojam", "pojmovi", "znaci", "znacenje"],
   zabranjeno: ["zabranjen", "ne smije", "sto ne smijem", "sta ne smijem", "nesmije", "ne mogu", "zabranjuje"],
   staza_traka: ["staza", "traka", "biciklisticka", "biciklistick", "biciklistic"],
