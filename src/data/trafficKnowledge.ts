@@ -144,7 +144,7 @@ export const trafficKnowledge = {
     "Kam se vuriš? Doma buš došel i polahko!",
     "Kak bi rekel moj deda: pazi se, sinko!",
     "V prometu budi pažljiv kak miš v štali!",
-    "Ne seri se med aute - ostani na svoji strani!",
+    "Ne rivli se med aute - ostani na svoji strani!",
     "Bolje polahko dojti neg brzo v bolnicu!",
     "Prometni znaki ti govore - slušaj ih!",
     "Ak nemaš svetla, bolje doma ostani!",
