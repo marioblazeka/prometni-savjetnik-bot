@@ -1028,6 +1028,328 @@ export const quizQuestions: QuizQuestion[] = [
     explanation: "Pješački prijelaz prelazite hodajući i gurajući bicikl.",
     medimurskaIzreka: "Priko zebre si pešak - sjahaj z biciklina!",
     signImage: "crosswalk"
+  },
+  {
+    id: 73,
+    question: "Što radiš s neispravnim biciklom u prometu?",
+    options: [
+      "Nastaviš voziti",
+      "Guraš bicikl kao pješak ili ga prevezeš drugim vozilom",
+      "Ostaviš ga na cesti",
+      "Zoveš policiju"
+    ],
+    correctAnswer: 1,
+    explanation: "Neispravan bicikl u prometu možeš gurati po cesti krećući se kao pješak ili ga prevesti drugim vozilom.",
+    medimurskaIzreka: "Ak se bicklin pokvaril - guraj ga kak pešak!",
+    signImage: "walking"
+  },
+  {
+    id: 74,
+    question: "Koliko široka smije biti prikolica za bicikl?",
+    options: [
+      "60 cm",
+      "80 cm",
+      "100 cm",
+      "Nema ograničenja"
+    ],
+    correctAnswer: 1,
+    explanation: "Prikolica koju vučeš biciklom ne smije biti šira od 80 cm.",
+    medimurskaIzreka: "Prikolica max 80 cm široka - to je pravilo!",
+    signImage: "trailer"
+  },
+  {
+    id: 75,
+    question: "Na koliko kotača mora biti prikolica za bicikl?",
+    options: [
+      "Na jednom kotaču",
+      "Na dva kotača",
+      "Na tri kotača",
+      "Na četiri kotača"
+    ],
+    correctAnswer: 1,
+    explanation: "U prometu na cesti smiješ vući prikolicu na dva kotača.",
+    medimurskaIzreka: "Prikolica mora biti na dva kotača!",
+    signImage: "trailer"
+  },
+  {
+    id: 76,
+    question: "O čemu ovisi duljina puta kočenja bicikla?",
+    options: [
+      "Samo o boji bicikla",
+      "O stanju kolnika, brzini vožnje i stanju guma",
+      "Samo o vremenu",
+      "Samo o godišnjem dobu"
+    ],
+    correctAnswer: 1,
+    explanation: "Duljina puta kočenja ovisi o stanju kolnika, brzini vožnje i stanju guma.",
+    medimurskaIzreka: "Brže voziš - duže kočiš, tak je to!",
+    signImage: "braking"
+  },
+  {
+    id: 77,
+    question: "Zašto moraju gume na biciklu biti ispravno napumpane?",
+    options: [
+      "Samo zbog estetike",
+      "Radi udobnosti i sigurnosti vožnje",
+      "Samo zbog brzine",
+      "Nije važno"
+    ],
+    correctAnswer: 1,
+    explanation: "Gume moraju biti ispravno napumpane i bez oštećenja radi udobnosti i sigurnosti vožnje.",
+    medimurskaIzreka: "Gume moraju biti v redu - to je osnova!",
+    signImage: "tire"
+  },
+  {
+    id: 78,
+    question: "O čemu ovisi dovoljan razmak od vozila ispred tebe?",
+    options: [
+      "O brzini vožnje i stanju kolnika",
+      "Samo o boji vozila",
+      "Samo o vremenu dana",
+      "Nije bitan razmak"
+    ],
+    correctAnswer: 0,
+    explanation: "Dovoljan razmak ovisi o brzini kojom voziš i stanju kolnika.",
+    medimurskaIzreka: "Drži razmak - ne vozi drugome v rit!",
+    signImage: "distance"
+  },
+  {
+    id: 79,
+    question: "Kada je bitan bočni razmak?",
+    options: [
+      "Samo kod parkiranja",
+      "Kod mimoilaženja, pretjecanja i obilaženja",
+      "Samo kod kočenja",
+      "Nije bitan"
+    ],
+    correctAnswer: 1,
+    explanation: "Bočni razmak je bitan prilikom mimoilaženja, pretjecanja i obilaženja.",
+    medimurskaIzreka: "Bočni razmak ti čuva kožu!",
+    signImage: "distance"
+  },
+  {
+    id: 80,
+    question: "Kako postupaš na kolniku gdje je šljunak i pijesak?",
+    options: [
+      "Voziš brže",
+      "Voziš oprezno i izbjegavaš naglo kočenje",
+      "Nastaviš normalno",
+      "Kočiš naglo"
+    ],
+    correctAnswer: 1,
+    explanation: "Na šljunku i pijesku vozi oprezno i izbjegavaj naglo kočenje da ne izgubiš ravnotežu.",
+    medimurskaIzreka: "Na šljunku polahko - inače buš na ritima!",
+    signImage: "slippery"
+  },
+  {
+    id: 81,
+    question: "Kako postupaš ako si umoran nakon treninga?",
+    options: [
+      "Voziš brže da brže dođeš kući",
+      "Ne sjedaš na bicikl - guraš ga kući",
+      "Voziš normalno",
+      "Slušaš glazbu da se razbudiš"
+    ],
+    correctAnswer: 1,
+    explanation: "Kada si umoran, ne sjedaš na bicikl jer je to opasno. Guraš bicikl kući.",
+    medimurskaIzreka: "Umoren si? Guraj bicikl, ne rizikiraj!",
+    signImage: "tired"
+  },
+  {
+    id: 82,
+    question: "Gdje NE smiješ voziti bicikl?",
+    options: [
+      "Na biciklističkoj stazi",
+      "Na autocesti i brzoj cesti",
+      "Na prometnoj traci u naselju",
+      "Na kolniku u seoskom području"
+    ],
+    correctAnswer: 1,
+    explanation: "Biciklom ne smiješ sudjelovati u prometu na autocestama, brzim cestama i cestama namijenjenim isključivo za promet motornih vozila.",
+    medimurskaIzreka: "Na autocesti z biciklinom? Si poludel?",
+    signImage: "no-bikes"
+  },
+  {
+    id: 83,
+    question: "Na što obraćaš pozornost prilikom obilaženja?",
+    options: [
+      "Samo na vozila iza tebe",
+      "Na bočni razmak, vozila iz suprotnog smjera i vozila iza tebe",
+      "Samo na pješake",
+      "Ne moraš obraćati pozornost"
+    ],
+    correctAnswer: 1,
+    explanation: "Prilikom obilaženja obraćaš pozornost na bočni razmak, vozila iz suprotnog smjera i vozila iza tebe.",
+    medimurskaIzreka: "Kad obilaziš - gledaj na sve strane!",
+    signImage: "overtaking"
+  },
+  {
+    id: 84,
+    question: "Gdje parkiraš bicikl?",
+    options: [
+      "Na sredini nogostupa",
+      "Na nosačima za bicikle",
+      "Na pješačkom prijelazu",
+      "Na prometnoj traci"
+    ],
+    correctAnswer: 1,
+    explanation: "Bicikl parkiraš na nosačima za ostavljanje bicikla.",
+    medimurskaIzreka: "Bicikl na stalak - ne v sredinu ceste!",
+    signImage: "parking"
+  },
+  {
+    id: 85,
+    question: "Kako se približavaš pješačkom prijelazu?",
+    options: [
+      "Ubrzavaš",
+      "Smanjenom brzinom i s povećanim oprezom",
+      "Istom brzinom",
+      "Nije bitno"
+    ],
+    correctAnswer: 1,
+    explanation: "Pješačkom prijelazu se približavaš smanjenom brzinom i s povećanim oprezom.",
+    medimurskaIzreka: "Polahko priko zebr, pešaki su sveti!",
+    signImage: "crosswalk"
+  },
+  {
+    id: 86,
+    question: "Kako prelaziš željezničku prugu?",
+    options: [
+      "Samo ako vidiš vlak",
+      "Nikada ne moraš stati",
+      "Zaustaviš se ako se pale crvena svjetla ili spuštaju branici",
+      "Samo ako čuješ vlak"
+    ],
+    correctAnswer: 2,
+    explanation: "Zaustavljaš se ako se na svjetlosnom znaku pale crvena svjetla ili ako se branici spuštaju.",
+    medimurskaIzreka: "Vlak ne čeka - stani dok je crveno!",
+    signImage: "railway"
+  },
+  {
+    id: 87,
+    question: "Koliko širok smije biti teret na biciklu sa svake strane?",
+    options: [
+      "30 cm",
+      "50 cm",
+      "1 metar",
+      "Nema ograničenja"
+    ],
+    correctAnswer: 1,
+    explanation: "Teret na nosaču bicikla ne smije biti širi od 50 cm sa svake strane bicikla.",
+    medimurskaIzreka: "Ne tovaruj kak magarec - 50 cm je max!",
+    signImage: "cargo"
+  },
+  {
+    id: 88,
+    question: "Što znači žuto treptavo svjetlo na semaforu?",
+    options: [
+      "Možeš proći bez gledanja",
+      "Moraš stati",
+      "Povećani oprez",
+      "Zeleno će uskoro biti"
+    ],
+    correctAnswer: 2,
+    explanation: "Žuto treptavo svjetlo na semaforu znači povećani oprez.",
+    medimurskaIzreka: "Žuto trepta - pazi, nekaj se događa!",
+    signImage: "traffic-light"
+  },
+  {
+    id: 89,
+    question: "Što znači kombinacija crvenog i žutog svjetla na semaforu?",
+    options: [
+      "Moraš stati",
+      "Uskoro će biti zeleno - pripremi se",
+      "Povećani oprez",
+      "Slobodan prolaz"
+    ],
+    correctAnswer: 1,
+    explanation: "Crveno + žuto svjetlo znači da će uskoro biti zeleno - pripremi se za kretanje.",
+    medimurskaIzreka: "Crleno i žuto - pripravaj se za vožnju!",
+    signImage: "traffic-light"
+  },
+  {
+    id: 90,
+    question: "Koja je maksimalna snaga elektromotora na OPS-u?",
+    options: [
+      "0,25 kW",
+      "0,6 kW",
+      "1 kW",
+      "2 kW"
+    ],
+    correctAnswer: 1,
+    explanation: "Maksimalna trajna snaga elektromotora OPS-a je 0,6 kW.",
+    medimurskaIzreka: "OPS ima max 0,6 kW - ne vuče kak traktor!",
+    signImage: "scooter"
+  },
+  {
+    id: 91,
+    question: "Ima li OPS (romobil) sjedeće mjesto?",
+    options: [
+      "Da, jedno",
+      "Da, dva",
+      "NE - OPS je vozilo bez sjedećeg mjesta",
+      "Ovisi o modelu"
+    ],
+    correctAnswer: 2,
+    explanation: "OPS je vozilo BEZ sjedećeg mjesta. Ako ima sjedalo, to više nije OPS.",
+    medimurskaIzreka: "Romobil je za stajanje, ne za sedenje!",
+    signImage: "scooter"
+  },
+  {
+    id: 92,
+    question: "Smije li vozač OPS-a voziti po pješačkoj zoni?",
+    options: [
+      "Da, uvijek",
+      "Samo ako nema biciklističke staze, brzinom hoda i uz oprez",
+      "Nikada",
+      "Samo noću"
+    ],
+    correctAnswer: 1,
+    explanation: "OPS se smije kretati po površinama za pješake samo ako ne postoji biciklistička staza ili traka i uz vođenje računa o sigurnosti.",
+    medimurskaIzreka: "V pješačkoj zoni polahko i pazi na pešake!",
+    signImage: "pedestrian-zone"
+  },
+  {
+    id: 93,
+    question: "Tko je VOZAČ prema prometnim propisima?",
+    options: [
+      "Samo vozač automobila",
+      "Osoba koja upravlja vozilom",
+      "Samo punoljetna osoba",
+      "Samo osoba s vozačkom dozvolom"
+    ],
+    correctAnswer: 1,
+    explanation: "Vozač je osoba koja upravlja vozilom - uključujući bicikl i OPS!",
+    medimurskaIzreka: "Na biciklinu si vozač - tak te zakon gleda!",
+    signImage: "driver"
+  },
+  {
+    id: 94,
+    question: "Tko je PJEŠAK prema prometnim propisima?",
+    options: [
+      "Samo osoba koja hoda",
+      "Osoba koja sudjeluje u prometu, a ne upravlja vozilom niti se prevozi",
+      "Samo dijete",
+      "Samo osoba na nogostupu"
+    ],
+    correctAnswer: 1,
+    explanation: "Pješak je osoba koja sudjeluje u prometu, a ne upravlja vozilom niti se prevozi vozilom.",
+    medimurskaIzreka: "Kad sjahneš z biciklina - postaneš pešak!",
+    signImage: "pedestrian"
+  },
+  {
+    id: 95,
+    question: "Što je RASKRIŽJE?",
+    options: [
+      "Ravni dio ceste",
+      "Površina na kojoj se križaju ili spajaju dvije ili više cesta",
+      "Parkiralište",
+      "Biciklistička staza"
+    ],
+    correctAnswer: 1,
+    explanation: "Raskrižje je površina na kojoj se križaju ili spajaju dvije ili više cesta.",
+    medimurskaIzreka: "Raskrižje - tam se ceste križaju, pazi!",
+    signImage: "intersection"
   }
 ];
 
