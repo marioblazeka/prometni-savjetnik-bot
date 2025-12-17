@@ -174,7 +174,7 @@ const Index = () => {
         {/* Footer */}
         <footer className="mt-4 text-center text-xs text-muted-foreground">
           <div className="flex items-center justify-between gap-4">
-            <img src={logoMain} alt="Logo" className="w-10 h-12 sm:w-12 sm:h-14 object-contain" />
+            <img src={logoMain} alt="Logo" className="w-10 h-12 sm:w-12 sm:h-14 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             <div className="flex-1 space-y-1">
               <p className="font-bold text-primary">#radionicamehatronike</p>
               <p>autor: <span className="font-semibold">m_ario</span></p>
@@ -183,7 +183,7 @@ const Index = () => {
                 Powered by <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">lovable.dev</a>
               </p>
             </div>
-            <img src={logoDkw} alt="DKW Logo" className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
+            <img src={logoDkw} alt="DKW Logo" className="w-12 h-12 sm:w-14 sm:h-14 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
           </div>
         </footer>
       </main>

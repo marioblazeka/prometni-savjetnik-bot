@@ -76,7 +76,7 @@ const topicKeywords = {
   prometni_znakovi: ["vrste prometnih", "prometnih znakova", "prometni znakovi", "znakovi postoje", "prometni znak", "znakovi", "znak opasnosti", "znak naredbe", "znak obavijesti"],
   pravila: ["pravila voznje", "osnovna pravila", "pravila bicikl", "kako voziti", "pravila", "voznje biciklom", "voziti bicikl"],
   nocna_voznja: ["voznju nocu", "voznja nocu", "moram imati za voznju", "nocna voznja", "nocu", "nocna", "mrak", "svjetl", "svjetlo"],
-  raskrizje: ["ponasam na raskrizju", "na raskrizju", "raskrizje", "raskrizj", "prednost prolaska", "pravilo desne"],
+  raskrizje: ["kako se ponasam na raskrizju", "ponasam na raskrizju", "na raskrizju", "raskrizje", "raskrizj", "prednost prolaska", "pravilo desne", "krizanje", "krizan", "raskrižje", "raskrižj", "križanj"],
   pojmovi: ["sto je", "sta je", "definicija", "pojam", "pojmovi", "znaci", "znacenje"],
   zabranjeno: ["zabranjen", "ne smije", "sto ne smijem", "sta ne smijem", "nesmije", "ne mogu", "zabranjuje"],
   staza_traka: ["staza", "traka", "biciklisticka", "biciklistick", "biciklistic"],
