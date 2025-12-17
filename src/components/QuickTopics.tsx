@@ -19,7 +19,8 @@ const topics = [
   { Sign: DangerSign, label: "Prometni znakovi", question: "Koje vrste prometnih znakova postoje?" },
   { Sign: StopSign, label: "Pravila vožnje", question: "Koja su osnovna pravila vožnje biciklom?" },
   { Sign: NightDrivingSign, label: "Noćna vožnja", question: "Što moram imati za vožnju noću?" },
-  { Sign: IntersectionSign, label: "Raskrižje", question: "Kako se ponašam na raskrižju?" },
+  // Namjerno eksplicitno, da uvijek otvori temu o raskrižju (bez zabune s drugim temama)
+  { Sign: IntersectionSign, label: "Raskrižje", question: "Raskrižje: pravilo desne strane i prednost prolaska" },
 ];
 
 export const QuickTopics = ({ onSelect, chatInputRef }: QuickTopicsProps) => {
