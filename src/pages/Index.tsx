@@ -3,6 +3,7 @@ import { Bike, MessageCircle, GraduationCap } from "lucide-react";
 import { ChatMessage } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { QuickTopics } from "@/components/QuickTopics";
+import { VideoLinks } from "@/components/VideoLinks";
 import { QuizMode } from "@/components/QuizMode";
 import { ModeNavButton } from "@/components/ModeNavButton";
 import { FeedbackButton } from "@/components/FeedbackButton";
@@ -10,6 +11,8 @@ import { AnimatedTrafficSigns } from "@/components/TrafficSignsSVG";
 import { useChatbot } from "@/hooks/useChatbot";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import logoMain from "@/assets/logo.jpg";
+import logoDkw from "@/assets/logo-dkw.png";
 
 type ViewMode = 'chat' | 'quiz';
 
@@ -113,6 +116,12 @@ const Index = () => {
       <main className="flex-1 container mx-auto p-2 sm:p-4 flex flex-col max-w-3xl">
         {viewMode === 'chat' ? (
           <>
+            {/* Video links with QR codes */}
+            <div className="mb-3 sm:mb-4">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2 font-semibold">📹 Video materijali:</p>
+              <VideoLinks />
+            </div>
+
             {/* Quick topics */}
             <div className="mb-3 sm:mb-4">
               <p className="text-xs sm:text-sm text-muted-foreground mb-2 font-semibold">Brze teme:</p>
@@ -163,13 +172,19 @@ const Index = () => {
         )}
 
         {/* Footer */}
-        <footer className="mt-4 text-center text-xs text-muted-foreground space-y-2">
-          <p className="font-bold text-primary">#radionicamehatronike</p>
-          <p>autor: <span className="font-semibold">m_ario</span></p>
-          <FeedbackButton />
-          <p className="text-muted-foreground/70">
-            Powered by <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">lovable.dev</a>
-          </p>
+        <footer className="mt-4 text-center text-xs text-muted-foreground">
+          <div className="flex items-center justify-between gap-4">
+            <img src={logoMain} alt="Logo" className="w-10 h-12 sm:w-12 sm:h-14 object-contain" />
+            <div className="flex-1 space-y-1">
+              <p className="font-bold text-primary">#radionicamehatronike</p>
+              <p>autor: <span className="font-semibold">m_ario</span></p>
+              <FeedbackButton />
+              <p className="text-muted-foreground/70">
+                Powered by <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">lovable.dev</a>
+              </p>
+            </div>
+            <img src={logoDkw} alt="DKW Logo" className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
+          </div>
         </footer>
       </main>
     </div>
