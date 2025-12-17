@@ -11,8 +11,8 @@ import { AnimatedTrafficSigns } from "@/components/TrafficSignsSVG";
 import { useChatbot } from "@/hooks/useChatbot";
 import { useSoundEffects } from "@/hooks/useSoundEffects";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import logoMain from "@/assets/logo.jpg";
-import logoDkw from "@/assets/logo-dkw.png";
+import logoMain from "@/assets/logo-main-transparent.png";
+import logoDkw from "@/assets/logo-dkw-transparent.png";
 
 type ViewMode = 'chat' | 'quiz';
 
@@ -174,16 +174,36 @@ const Index = () => {
         {/* Footer */}
         <footer className="mt-4 text-center text-xs text-muted-foreground">
           <div className="flex items-center justify-between gap-4">
-            <img src={logoMain} alt="Logo" className="w-10 h-12 sm:w-12 sm:h-14 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
+            <img
+              src={logoMain}
+              alt="LDL logo"
+              loading="lazy"
+              className="w-10 h-12 sm:w-12 sm:h-14 object-contain"
+            />
             <div className="flex-1 space-y-1">
               <p className="font-bold text-primary">#radionicamehatronike</p>
-              <p>autor: <span className="font-semibold">m_ario</span></p>
+              <p>
+                autor: <span className="font-semibold">m_ario</span>
+              </p>
               <FeedbackButton />
               <p className="text-muted-foreground/70">
-                Powered by <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">lovable.dev</a>
+                Powered by{" "}
+                <a
+                  href="https://lovable.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-primary transition-colors"
+                >
+                  lovable.dev
+                </a>
               </p>
             </div>
-            <img src={logoDkw} alt="DKW Logo" className="w-12 h-12 sm:w-14 sm:h-14 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
+            <img
+              src={logoDkw}
+              alt="DKW logo"
+              loading="lazy"
+              className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+            />
           </div>
         </footer>
       </main>
