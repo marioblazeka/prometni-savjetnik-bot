@@ -14,13 +14,12 @@ interface QuickTopicsProps {
 }
 
 const topics = [
-  { Sign: BikePathSign, label: "Oprema bicikla", question: "Koja oprema mora biti na biciklu?" },
-  { Sign: HelmetSign, label: "Kaciga", question: "Zašto je važno nositi kacigu?" },
-  { Sign: DangerSign, label: "Prometni znakovi", question: "Koje vrste prometnih znakova postoje?" },
-  { Sign: StopSign, label: "Pravila vožnje", question: "Koja su osnovna pravila vožnje biciklom?" },
-  { Sign: NightDrivingSign, label: "Noćna vožnja", question: "Što moram imati za vožnju noću?" },
-  // Namjerno eksplicitno, da uvijek otvori temu o raskrižju (bez zabune s drugim temama)
-  { Sign: IntersectionSign, label: "Raskrižje", question: "Raskrižje: pravilo desne strane i prednost prolaska" },
+  { Sign: BikePathSign, label: "Oprema bicikla", question: "__qt__:oprema" },
+  { Sign: HelmetSign, label: "Kaciga", question: "__qt__:kaciga" },
+  { Sign: DangerSign, label: "Prometni znakovi", question: "__qt__:prometni_znakovi" },
+  { Sign: StopSign, label: "Pravila vožnje", question: "__qt__:pravila" },
+  { Sign: NightDrivingSign, label: "Noćna vožnja", question: "__qt__:nocna_voznja" },
+  { Sign: IntersectionSign, label: "Raskrižje", question: "__qt__:raskrizje" },
 ];
 
 export const QuickTopics = ({ onSelect, chatInputRef }: QuickTopicsProps) => {
