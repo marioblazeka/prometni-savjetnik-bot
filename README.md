@@ -80,7 +80,7 @@ Ako se backend koristi, on je:
 
 ---
 
-## OPŠTA PODJELA
+## OPĆA PODJELA
 
 * **Frontend:** kompletan projekat (UI, logika, interakcija)
 * **Backend:** ❌ ne postoji u ovom repozitoriju
@@ -351,9 +351,4 @@ Frontend bi komunicirao sa backendom preko:
 * 📦 Podaci → `data`
 * 📄 Stranice → `pages`
 
-Ako želiš, sljedeće mogu:
-
-* nacrtati **arhitektonski dijagram (frontend ↔ backend)**
-* predložiti **kako dodati backend (Node, Nest, Firebase)**
-* napraviti **onboarding dokument za nove developere**
 
